@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <p-toast></p-toast>
+    <div class="row" style="background-color: #f7f5f5;">
+        <div class="col-md-7 px-0">
+            <img src="assets\pexels.jpg" class="img-fluid bg-primary bg-gradient" alt="...">
+        </div>
+        <div class="col-md-5 col-sm-12 px-5" style="background-color: #f7f5f5;">
+            <div class="my-4" style="background-color: white;">
+                <p class="h1 px-5 pt-4 text-center" style="font-family: sans-serif;">Sign Up</p>
+                <form class="px-5 pb-4" [formGroup]="registrationForm">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                        <input type="text" formControlName="fullName" class="form-control border-0 border-bottom"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" formControlName="email" class="form-control border-0 border-bottom"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" formControlName="userName" class="form-control border-0 border-bottom"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" formControlName="password" class="form-control border-0 border-bottom"
+                            id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
+                        <input type="password" formControlName="repeatPassword"
+                            class="form-control border-0 border-bottom" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" formControlName="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree to <strong> Terms of
+                                User</strong></label>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" onclick="false" (click)="submitRegistrationData()"
+                            class="btn btn-outline-primary mx-2">Sign Up</button>
+                        <a type="submit" href="/login" class="btn btn-outline-success mx-2">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
